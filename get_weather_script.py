@@ -31,7 +31,7 @@ def get_weather(city):
         print("Ошибка при получении данных о погоде =(\n")
         return
     print(
-        f"Погода для города: {result_city["name"]}\n"
+        f"Погода для города: {result_city['name']}\n"
         f"Сегодня ночью: {temps[3]} °C\n"
         f"Сегодня днём: {temps[14]} °C\n"
         f"Сегодня вечером: {temps[20]} °C\n"
@@ -51,7 +51,7 @@ while True:
     elif not city.isalpha():
         flag = True
         for i in city:
-            if i not in "- " and not i.isalpha():
+            if i not in "-. " and not i.isalpha():
                 flag = False
         if not flag:
             print("В названии города не должно быть недопустимых символов, введится валидное название!\n")
